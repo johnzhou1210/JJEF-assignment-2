@@ -1,9 +1,63 @@
 <!DOCTYPE html>
 <html>
     <head> 
+        <script src="farhana.js"></script>
         <title> Recreated Functions </title> 
     </head>
     <body>
+      <h1> Recreated methods </h1>
+      <p> Inputs should be numerical values and in the form of an array. Example: [1,2,3]</p>
+        <h1> myEach </h1>
+        <p> Prints the input values with indexes </p>
+        <div>
+            <h3>Input Div</h3>
+            <textarea id="inputArray" rows="4" cols="50"></textarea>
+          </div>
         
+          <div>
+            <h3>Argument Div</h3>
+            <input type="text" id="additionalArgument">
+          </div>
+        
+          <button onclick="runMyEach()">Run</button>
+          <div>
+            <h3>Result Div</h3>
+            <pre id="resultArray"></pre>
+          </div>
+        
+          <h1> myMap </h1>
+          <p> Creates a new array with all the input values multiplied by 2</p>
+        <div>
+            <h3>Input Div</h3>
+            <textarea id="inputArray2" rows="4" cols="50"></textarea>
+          </div>
+        
+          <div>
+            <h3>Argument Div</h3>
+            <input type="text" id="additionalArgument2">
+          </div>
+        
+          <button onclick="runMyMap()">Run</button>
+          <div>
+            <h3>Result Div</h3>
+            <pre id="resultArray2"></pre>
+          </div>
+          <h1> myFilter </h1>
+          <p>Creates a new array with all the input values less than 10</p>
+        <div>
+            <h3>Input Div</h3>
+            <textarea id="inputArray3" rows="4" cols="50"></textarea>
+          </div>
+        
+          <div>
+            <h3>Argument Div</h3>
+            <input type="text" id="additionalArgument3">
+          </div>
+        
+          <button onclick="runMyFilter()">Run</button>
+          <div>
+            <h3>Result Div</h3>
+            <pre id="resultArray3"></pre>
+          </div>
     </body>
 </html>
