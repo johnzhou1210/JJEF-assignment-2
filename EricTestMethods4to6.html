@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Array Methods</title>
+    <script src="Eric_Method.js"></script>
+</head>
+<body>
+    <!-- Used to display results -->
+    <p id="arrayDisplay"></p>
+
+    <p>Results:</p>
+
+    <p id="someResult"></p>
+    <p id="everyResult"></p>
+    <p id="reduceResult"></p>
+
+    <script>
+        //Array
+        const numbers = [1, 2, 3, 4, 5];
+
+        //Displays the array
+        document.getElementById("arrayDisplay").textContent = "Array Used: [" + numbers.join(", ") + "]";
+
+        //Tests methods
+        const hasEvenNumber = numbers.mySome((number) => number % 2 === 0);
+        document.getElementById("someResult").textContent = "mySome() result (Has even number): " + hasEvenNumber;
+
+        const allEvenNumbers = numbers.myEvery((number) => number % 2 === 0);
+        document.getElementById("everyResult").textContent = "myEvery() result (All even numbers): " + allEvenNumbers;
+
+        const sum = numbers.myReduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        document.getElementById("reduceResult").textContent = "myReduce() result (Sum of numbers): " + sum;
+    </script>
+</body>
+</html>
