@@ -36,9 +36,10 @@ inputIncludesButton.addEventListener("click", () => {
 
 // displays the possible result of individual elements provided by the user as a string
 function displayArray() {
-    let displayResult = "Is this what you expected:[";
-    let line = "";
+    let displayResult = "Is this what you expected: ";
+
     if (inputIncludesContent !== null) {
+        let line = "[";
         for (let i=0; i<inputIncludesContent.length; i++) {
             if (inputIncludesContent[i] !== " ") {
                 line += inputIncludesContent[i];
@@ -49,9 +50,8 @@ function displayArray() {
                 line += "]";
             }
         }
+        displayResult += line;
     }
-
-    displayResult += line;
 
     //console.log(displayResult);
     return displayResult;
@@ -60,8 +60,9 @@ function displayArray() {
 // creates array from individual elements provided by the user
 function createArray() {
     let createdIncludesArray = [];
-    let word = "";
+
     if (inputIncludesContent != null) {
+        let word = "";
         for (let i=0; i<inputIncludesContent.length; i++) {
             if (inputIncludesContent[i] !== " ") {
                 word += inputIncludesContent[i];
