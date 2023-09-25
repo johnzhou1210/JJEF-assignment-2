@@ -1,4 +1,6 @@
 
+// myIncludes()
+
 // input div
 let inputIncludesArray = document.body.querySelector("#includes-array");
 let inputIncludesArrayDisplay = document.body.querySelector("#includes-array-display");
@@ -10,11 +12,12 @@ let inputIncludesTarget = document.body.querySelector("#includes-target");
 // result div
 let inputIncludesResultText = document.body.querySelector("#includes-result-text");
 
-// button
+// user button 
 let inputIncludesButton = document.body.querySelector("#includes-button");
 
 // myIncludes example result
 let myIncludesExample = document.body.querySelector("#myIncludes-example");
+let myIncludesExampleButton = document.body.querySelector("#includes-button-example");
 
 let inputIncludesContent = null;
 let inputIncludesTargetElement = null;
@@ -37,7 +40,14 @@ inputIncludesButton.addEventListener("click", () => {
     }
 });
 
-myIncludesExample.value = myIncludes([1,2,3,"word"], 2);
+myIncludesExampleButton.addEventListener("click", ()=> {
+    myIncludesExample.value = myIncludes([1,2,3,"word"], 2);
+});
+
+
+// myIndexOf()
+
+
 
 // displays the possible result of individual elements provided by the user as a string
 function displayArray() {
