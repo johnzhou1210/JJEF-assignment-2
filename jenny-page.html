@@ -1,20 +1,3 @@
-<!-- myIncludes() myIndexOf() myPush() -->
-
-<!-- myIncludes() Without using the native “Array.prototype.includes” 
-    method of JavaScript, compose a function titled “myIncludes” 
-    that will take in an array of elements and indicate whether or not 
-    a target element is contained within the input array. 
-    This returns a boolean.-->
-
-<!-- myIndexOf() Without using the native “Array.prototype.indexOf” method of JavaScript, 
-    compose a function titled “myIndexOf” that will take in an array of elements 
-    and returns the index of the first encounter of a target element (if it is found) 
-    or -1 if that element does not exist within the input array. -->
-
- <!-- myPush() Without using the native “Array.prototype.push” method of JavaScript, 
-    compose a function titled “myPush” that will take in an array of elements 
-    as well as an elementToAdd and append that element to the end of the array. -->
-
 <!DOCTYPE html>
 <html>
     <body>
@@ -22,15 +5,31 @@
             <title> 3 functions </title>
         </head>
 
-        <script src="jenny-page.js"></script>
-
         <h1>3 Functions</h1>
 
         <h2>myIncludes()</h2>
 
+        <div id="input-div">
+            <label>Input elements for array with spaces:</label>
+            <textarea id="includes-array"></textarea>
+            <textarea id="includes-array-display" readonly></textarea>
+            <button id="includes-array-check">Check array</button>
+        </div>
+
+        <div id="argument-div">
+            <label>Input target:</label>
+            <input id="includes-target" placeholder="target">
+        </div>
+        <div id="result-div">
+            <textarea id="includes-result-text"readonly></textarea>
+        </div>
+
+        <button id="includes-button">Check if it includes element</button>
+
         <h2>myIndexOf()</h2>
 
         <h2>myPush()</h2>
-        
+
+        <script src="jenny-page.js"></script>
     </body>
 </html>
