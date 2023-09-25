@@ -44,6 +44,8 @@ button {
 textarea {
     resize: none;
     text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .flex-parent {
