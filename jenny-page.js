@@ -13,7 +13,7 @@ let inputIncludesResultText = document.body.querySelector("#includes-result-text
 // button
 let inputIncludesButton = document.body.querySelector("#includes-button");
 
-// myIncludes result example
+// myIncludes example result
 let myIncludesExample = document.body.querySelector("#myIncludes-example");
 
 let inputIncludesContent = null;
@@ -72,11 +72,13 @@ function createArray() {
             if (inputIncludesContent[i] !== " ") {
                 word += inputIncludesContent[i];
             } else {
-                createdIncludesArray.push(word);
+                //createdIncludesArray.push(word);
+                myPush(createdIncludesArray, word);
                 word = "";
             }
             if (i === inputIncludesContent.length - 1 && inputIncludesContent[i] !== " ") { // for last word
-                createdIncludesArray.push(word);
+                //createdIncludesArray.push(word);
+                myPush(createdIncludesArray, word);
                 word = "";
             }
         }
