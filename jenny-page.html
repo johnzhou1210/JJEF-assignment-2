@@ -2,7 +2,8 @@
 <html>
     <body>
         <head>
-            <title> 3 functions </title>
+            <title> Three functions </title>
+            <!-- <style src="jenny-page.css"></style> -->
         </head>
 
         <h1>3 Functions</h1>
@@ -10,21 +11,39 @@
         <h2>myIncludes()</h2>
 
         <div id="input-div">
-            <label>Input elements for array with spaces:</label>
-            <textarea id="includes-array"></textarea>
-            <textarea id="includes-array-display" readonly></textarea>
+            <h3>User Input</h3>
+            <label>Input elements with one space in between:</label> <br>
+            <textarea id="includes-array" placeholder="1 2 3 word text"></textarea> <br>
+
+            <label>Check the array beforehand</label> <br>
+            <textarea id="includes-array-display" placeholder="user array appears here" readonly></textarea> <br>
+
             <button id="includes-array-check">Check array</button>
+
+            <h4>Example Input</h4>
+            <p>[1, 2, 3, "word"]</p>
         </div>
 
         <div id="argument-div">
-            <label>Input target:</label>
-            <input id="includes-target" placeholder="target">
-        </div>
-        <div id="result-div">
-            <textarea id="includes-result-text"readonly></textarea>
+            <h3>User argument</h3>
+            <label>Input one element to target:</label> <br>
+            <textarea id="includes-target" placeholder="2"></textarea>
+
+            <h4>Example argument</h4>
+            <p>2</p>
         </div>
 
-        <button id="includes-button">Check if it includes element</button>
+        <h3>Use myIncludes() button</h3>
+        <button id="includes-button">Target element</button>
+
+        <div id="result-div">
+            <h3>User Result</h3>
+            <textarea id="includes-result-text" readonly></textarea>
+
+            <h4>Example Result</h4>
+            <textarea id="myIncludes-example" readonly></textarea>
+        </div>
+
 
         <h2>myIndexOf()</h2>
 
