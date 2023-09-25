@@ -1,16 +1,44 @@
-body {
-    padding-left: 2rem;
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
 }
 
 .input-div {
-    border: 2px solid black;
+    margin: auto;
+    border: 2px solid orange;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    width: 20rem;
 }
 
 .argument-div {
-    border: 2px solid orange;
+    margin: auto;
+    border: 2px solid blueviolet;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    width: 20rem;
 }
 
 .result-div {
-    border: 2px solid blue;
+    margin: auto;
+    border: 2px solid firebrick;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    width: 20rem;
+}
+
+.button-div {
+    margin: auto;
+    border: 2px solid green;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    width: 20rem;
 }
 
