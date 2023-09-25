@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Array Methods</title>
+    <script src="Eric_Method.js"></script>
+    <link rel="stylesheet" type="text/css" href="Eric_styles.css">
+</head>
+<body>
+    <h2>Test Fuctions and Formatting</h2>
+    <p>Example Array to use for testing: [1,2,3] </p>
+
+    <!-- Section 1: Test mySome -->
+    <h2>Test mySome()</h2>
+    <p>Test function used => number % 2 === 0 </p>
+    <label for="arrayInput">Enter an array (comma-separated):</label>
+    <input type="text" id="arrayInput">
+    <button onclick="testSome()">Test mySome</button>
+
+    <p id="resultSome1"></p>
+
+    <h2>Test mySome()</h2>
+    <p>Test function used => number % 3 === 0 </p>
+    <label for="arrayInput">Enter an array (comma-separated):</label>
+    <input type="text" id="arrayInput2">
+    <button onclick="testSome2()">Test mySome</button>
+
+    <p id="resultSome2"></p>
+
+    <!-- Section 2: Test myEvery -->
+    <h2>Test myEvery()</h2>
+    <p>Test function used => (currentValue) => currentValue < 40 </p>
+    <label for="arrayInput">Enter an array (comma-separated):</label>
+    <input type="text" id="arrayInput3">
+    <button onclick="testEvery()">Test myEvery</button>
+
+    <p id="resultEvery1"></p>
+
+    <h2>Test myEvery()</h2>
+    <p>Test function used => (currentValue) => currentValue > 80 </p>
+    <label for="arrayInput">Enter an array (comma-separated):</label>
+    <input type="text" id="arrayInput4">
+    <button onclick="testEvery2()">Test myEvery</button>
+
+    <p id="resultEvery2"></p>
+
+    <!-- Section 3: Test myReduce -->
+    <h2>Test myReduce()</h2>
+    <p>Test function used => accumulator + currentValue, initialValue (set as zero) </p>
+    <label for="arrayInput">Enter an array (comma-separated):</label>
+    <input type="text" id="arrayInput5">
+    <button onclick="testReduce()">Test myReduce</button>
+
+    <p id="resultReduce1"></p>
+
+    <h2>Test myReduce()</h2>
+    <p>Test function used => accumulator + currentValue, initialValue </p>
+    <label for="arrayInput">Enter an array (comma-separated):</label>
+    <input type="text" id="arrayInput6">
+    <p></p>
+    <label for="numberInput">Enter an initial value:</label>
+    <input type="number" id="numberInput6">
+    <button onclick="testReduce2()">Test myReduce</button>
+
+    <p id="resultReduce2"></p>
+</body>
+</html>
