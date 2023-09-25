@@ -27,7 +27,7 @@ inputIncludesArray.addEventListener("input", () => {
 });
 
 inputIncludesArrayCheck.addEventListener("click", () => {
-    inputIncludesArrayDisplay.value = displayArray();
+    inputIncludesArrayDisplay.value = displayArray(inputIncludesContent);
 });
 
 inputIncludesTarget.addEventListener("input", () => {
@@ -36,7 +36,7 @@ inputIncludesTarget.addEventListener("input", () => {
 
 inputIncludesButton.addEventListener("click", () => {
     if (inputIncludesContent !== null && inputIncludesTargetElement !== null) {
-        inputIncludesResultText.value = myIncludes(createArray(), inputIncludesTargetElement); 
+        inputIncludesResultText.value = myIncludes(createArray(inputIncludesContent), inputIncludesTargetElement); 
     }
 });
 
@@ -45,57 +45,95 @@ myIncludesExampleButton.addEventListener("click", ()=> {
 });
 
 
-// myIndexOf()
+// myIndexOF()
 
+// input div
+let inputIndexOfArray = document.body.querySelector("#indexOf-array");
+let inputIndexOfArrayDisplay = document.body.querySelector("#indexOf-array-display");
+let inputIndexOfArrayCheck = document.body.querySelector("#indexOf-array-check");
 
+// argument div
+let inputIndexOfTarget = document.body.querySelector("#indexOf-target");
+
+// result div
+let inputIndexOfResultText = document.body.querySelector("#indexOf-result-text");
+
+// user button 
+let inputIndexOfButton = document.body.querySelector("#indexOf-button");
+
+// myIndexOf example result
+let myIndexOfExample = document.body.querySelector("#myIndexOf-example");
+let myIndexOfExampleButton = document.body.querySelector("#indexOf-button-example");
+
+let inputIndexOfContent = null;
+let inputIndexOfTargetElement = null;
+
+inputIndexOfArray.addEventListener("input", () => {
+    inputIndexOfContent = inputIndexOfArray.value;
+});
+
+inputIndexOfArrayCheck.addEventListener("click", () => {
+    inputIndexOfArrayDisplay.value = displayArray(inputIndexOfContent);
+});
+
+inputIndexOfTarget.addEventListener("input", () => {
+    inputIndexOfTargetElement = inputIndexOfTarget.value;
+});
+
+inputIndexOfButton.addEventListener("click", () => {
+    if (inputIndexOfContent !== null && inputIndexOfTargetElement !== null) {
+        inputIndexOfResultText.value = myIndexOf(createArray(inputIndexOfContent), inputIndexOfTargetElement); 
+    }
+});
+
+myIndexOfExampleButton.addEventListener("click", ()=> {
+    myIndexOfExample.value = myIndexOf([1,2,3,"word"], 2);
+});
 
 // displays the possible result of individual elements provided by the user as a string
-function displayArray() {
+function displayArray(inputContent) {
     let displayResult = "[]";
 
-    if (inputIncludesContent !== null) {
+    if (inputContent !== null) {
         let line = "[";
-        for (let i=0; i<inputIncludesContent.length; i++) {
-            if (inputIncludesContent[i] !== " ") {
-                line += inputIncludesContent[i];
+        for (let i=0; i<inputContent.length; i++) {
+            if (inputContent[i] !== " ") {
+                line += inputContent[i];
             } else {
                 line += ", ";
             }
-            if (i === inputIncludesContent.length - 1 && inputIncludesContent[i] !== " ") { // for last word
+            if (i === inputContent.length - 1 && inputContent[i] !== " ") { // for last word
                 line += "]";
             }
         }
         displayResult = line;
     }
 
-    //console.log(displayResult);
+    console.log(displayResult);
     return displayResult;
 }
 
 // creates array from individual elements provided by the user
-function createArray() {
-    let createdIncludesArray = [];
+function createArray(inputContent) {
+    let createdArray = [];
 
-    if (inputIncludesContent != null) {
+    if (inputContent != null) {
         let word = "";
-        for (let i=0; i<inputIncludesContent.length; i++) {
-            if (inputIncludesContent[i] !== " ") {
-                word += inputIncludesContent[i];
+        for (let i=0; i<inputContent.length; i++) {
+            if (inputContent[i] !== " ") {
+                word += inputContent[i];
             } else {
-                //createdIncludesArray.push(word);
-                myPush(createdIncludesArray, word);
+                myPush(createdArray, word);
                 word = "";
             }
-            if (i === inputIncludesContent.length - 1 && inputIncludesContent[i] !== " ") { // for last word
-                //createdIncludesArray.push(word);
-                myPush(createdIncludesArray, word);
+            if (i === inputContent.length - 1 && inputContent[i] !== " ") { // for last word
+                myPush(createdArray, word);
                 word = "";
             }
         }
     }
 
-    //console.log(createdIncludesArray);
-    return createdIncludesArray;
+    return createdArray;
 }
 
 
@@ -113,6 +151,7 @@ function myIncludes(arr, target) {
             return true;
         }
     }
+
     return false;
 }
 
@@ -129,6 +168,7 @@ function myIndexOf(arr, target) {
             return i;
         }
     }
+
     return -1;
 }
 
