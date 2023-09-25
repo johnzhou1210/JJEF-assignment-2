@@ -1,0 +1,16 @@
+body {
+    padding-left: 2rem;
+}
+
+.input-div {
+    border: 2px solid black;
+}
+
+.argument-div {
+    border: 2px solid orange;
+}
+
+.result-div {
+    border: 2px solid blue;
+}
+
