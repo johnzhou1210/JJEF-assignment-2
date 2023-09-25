@@ -41,7 +41,7 @@ myIncludesExample.value = myIncludes([1,2,3,"word"], 2);
 
 // displays the possible result of individual elements provided by the user as a string
 function displayArray() {
-    let displayResult = "Is this what you expected: ";
+    let displayResult = "[]";
 
     if (inputIncludesContent !== null) {
         let line = "[";
@@ -55,7 +55,7 @@ function displayArray() {
                 line += "]";
             }
         }
-        displayResult += line;
+        displayResult = line;
     }
 
     //console.log(displayResult);
