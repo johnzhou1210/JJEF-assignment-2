@@ -13,6 +13,9 @@ let inputIncludesResultText = document.body.querySelector("#includes-result-text
 // button
 let inputIncludesButton = document.body.querySelector("#includes-button");
 
+// myIncludes result example
+let myIncludesExample = document.body.querySelector("#myIncludes-example");
+
 let inputIncludesContent = null;
 let inputIncludesTargetElement = null;
 
@@ -33,6 +36,8 @@ inputIncludesButton.addEventListener("click", () => {
         inputIncludesResultText.value = myIncludes(createArray(), inputIncludesTargetElement); 
     }
 });
+
+myIncludesExample.value = myIncludes([1,2,3,"word"], 2);
 
 // displays the possible result of individual elements provided by the user as a string
 function displayArray() {
