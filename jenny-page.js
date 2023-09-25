@@ -90,6 +90,57 @@ myIndexOfExampleButton.addEventListener("click", ()=> {
     myIndexOfExample.value = myIndexOf([1,2,3,"word"], 2);
 });
 
+
+// myPush()
+
+// input div
+let inputPushArray = document.body.querySelector("#push-array");
+let inputPushArrayDisplay = document.body.querySelector("#push-array-display");
+let inputPushArrayCheck = document.body.querySelector("#push-array-check");
+
+// argument div
+let inputPushTarget = document.body.querySelector("#push-target");
+
+// result div
+let inputPushResultText = document.body.querySelector("#push-result-text");
+
+// user button 
+let inputPushButton = document.body.querySelector("#push-button");
+
+// myPush example result
+let myPushExample = document.body.querySelector("#myPush-example");
+let myPushExampleButton = document.body.querySelector("#push-button-example");
+
+let inputPushContent = null;
+let inputPushTargetElement = null;
+
+let pushExampleArr = [1,2,3,"word"];
+
+inputPushArray.addEventListener("input", () => {
+    inputPushContent = inputPushArray.value;
+});
+
+inputPushArrayCheck.addEventListener("click", () => {
+    inputPushArrayDisplay.value = displayArray(inputPushContent);
+});
+
+inputPushTarget.addEventListener("input", () => {
+    inputPushTargetElement = inputPushTarget.value;
+});
+
+inputPushButton.addEventListener("click", () => {
+    if (inputPushContent !== null && inputPushTargetElement !== null) {
+        let pushableArr = createArray(inputPushContent);
+        myPush(pushableArr, inputPushTargetElement);
+        inputPushResultText.value = "[" + pushableArr + "]";
+    }
+});
+
+myPushExampleButton.addEventListener("click", ()=> {
+    myPush(pushExampleArr, 2);
+    myPushExample.value = "[" + pushExampleArr + "]";
+});
+
 // displays the possible result of individual elements provided by the user as a string
 function displayArray(inputContent) {
     let displayResult = "[]";
@@ -109,7 +160,6 @@ function displayArray(inputContent) {
         displayResult = line;
     }
 
-    console.log(displayResult);
     return displayResult;
 }
 
