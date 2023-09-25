@@ -23,3 +23,91 @@ Array.prototype.myReduce = function (callback, initialValue) {
     }
     return accumulator; //Returns the accumulated total
 };
+
+
+//Test functions below
+function testSome() {
+    let inputArrayText = document.getElementById('arrayInput').value;
+    let inputArray = [];
+    inputArray = JSON.parse(inputArrayText);
+
+    const ans = inputArray.mySome((number) => number % 2 === 0);
+
+    const resultElement = document.getElementById("resultSome1");
+    if (ans) {
+        resultElement.textContent = "mySome() result: The array has at least one even number.";
+    } else {
+        resultElement.textContent = "mySome() result: The array does not have any even numbers.";
+    }
+};
+
+function testSome2() {
+    let inputArrayText = document.getElementById('arrayInput2').value;
+    let inputArray = [];
+    inputArray = JSON.parse(inputArrayText);
+
+    const ans = inputArray.mySome((number) => number % 3 === 0);
+
+    const resultElement = document.getElementById("resultSome2");
+    if (ans) {
+        resultElement.textContent = "mySome() result: True";
+    } else {
+        resultElement.textContent = "mySome() result: False";
+    }
+};
+
+function testEvery() {
+    let inputArrayText = document.getElementById('arrayInput3').value;
+    let inputArray = [];
+    inputArray = JSON.parse(inputArrayText);
+
+    const ans = inputArray.myEvery((currentValue) => currentValue < 40);
+
+    const resultElement = document.getElementById("resultEvery1");
+    if (ans) {
+        resultElement.textContent = "myEvery() result: True";
+    } else {
+        resultElement.textContent = "myEvery() result: False";
+    }
+};
+
+function testEvery2() {
+    let inputArrayText = document.getElementById('arrayInput4').value;
+    let inputArray = [];
+    inputArray = JSON.parse(inputArrayText);
+
+    const ans = inputArray.myEvery((currentValue) => currentValue > 80);
+
+    const resultElement = document.getElementById("resultEvery2");
+    if (ans) {
+        resultElement.textContent = "myEvery() result: True";
+    } else {
+        resultElement.textContent = "myEvery() result: False";
+    }
+};
+
+function testReduce() {
+    let inputArrayText = document.getElementById('arrayInput5').value;
+    let inputArray = [];
+    inputArray = JSON.parse(inputArrayText);
+
+    const sum = inputArray.myReduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+    const resultElement = document.getElementById("resultReduce1");
+    resultElement.textContent = "myReduce() result:" + sum;
+};
+
+function testReduce2() {
+    let inputArrayText = document.getElementById('arrayInput6').value;
+    let inputArray = [];
+    inputArray = JSON.parse(inputArrayText);
+
+    let numberInput6 = document.getElementById('numberInput6');
+    let initialValue6 = parseFloat(numberInput6.value);
+
+
+    const sum = inputArray.myReduce((accumulator, currentValue) => accumulator + currentValue, initialValue6);
+
+    const resultElement = document.getElementById("resultReduce2");
+    resultElement.textContent = "myReduce() result:" + sum;
+};
