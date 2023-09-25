@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last 3 methods recreation demonstration</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+    <a href="../../index.html">
+        <= Back to homepage</a>
+
+            <!-- Main header -->
+            <div class="page-heading">
+                <h1>John Zhou - Last 3 methods recreation demonstration</h1>
+            </div>
+
+            <!-- myLastIndexOf() -->
+            <div class="method">
+                <div class="input">
+                    <!-- Show individual elements in the array -->
+                    <h2>Input Array (elements separated by commas without unnecessary spaces)</h2>
+                    <h4>e.g. hello,my,name,is,john</h4>
+                    <textarea id="my-last-index-of-arr" cols="160" rows="1">array,elements,go,here,just,can't,put,commas,in,elements!</textarea>
+                </div>
+                <div class="argument">
+                    <!-- Include a text description of the function -->
+                    <h2>myLastIndexOf(element, startIndex)</h2>
+                    <p>Takes in array of elements, returning index of last occurrence in array of given element if present or -1
+                        if not present.</p>
+                    <h2>Argument 1 (Element to find):</h2>
+                    <textarea id="my-last-index-of-arg-1" cols="16" rows="1">commas</textarea>
+                    <h2>Optional Argument 2 (Starting index of backward search as an integer):</h2>
+                    <textarea id="my-last-index-of-arg-2" cols="16" rows="1"></textarea>
+                    <!-- Include the element that is the second argument -->
+                </div>
+                <div class="result">
+                    <!-- Shows the result of running recreated method on input array. -->
+                    <h2>Output</h2>
+                    <p id="my-last-index-of-result">Output will appear here.</p>
+                </div>
+                <button id="invoke-my-last-index-of-function">
+                    <!-- Pressing it should take input and argument, run recreated method, and populated the result div. -->
+                    <strong>Invoke!</strong>
+                </button>
+            </div>
+
+            <!-- grabKeys() -->
+            <div class="method" id="grab-keys">
+                <div class="input">
+                    <!-- Show key-value pairs of the object -->
+                    <h2>Input (key:value pairs separated by commas without unnecessary spaces)</h2>
+                    <h4>e.g. g8:black_knight_2,e1:white_king,d7:black_pawn_4,c1:white_bishop_1,d8:black_queen</h4>
+                    <textarea id="grab-keys-arg-1" cols="160" rows="1">g8:black_knight_2,e1:white_king,d7:black_pawn_4,c1:white_bishop_1,d8:black_queen</textarea>
+                </div>
+                <div class="argument">
+                    <!-- Include a text description of the function -->
+                    <h2>grabKeys()</h2>
+                    <p>Returns all of input object's keys as an array.</p>
+                </div>
+                <div class="result">
+                    <!-- Shows the result of running recreated method on input array. -->
+                    <h2>Output</h2>
+                    <p id="grab-keys-result">Output will appear here.</p>
+                </div>
+                <button id="invoke-grab-keys-function">
+                    <!-- Pressing it should take input and argument, run recreated method, and populated the result div. -->
+                    <strong>Invoke!</strong>
+                </button>
+            </div>
+
+            <!-- grabValues() -->
+            <div class="method" id="grab-values">
+                <div class="input">
+                    <!-- Show key-value pairs of the object -->
+                    <h2>Input (key:value pairs separated by commas without unnecessary spaces)</h2>
+                    <h4>e.g. vanilla:41,chocolate:69,mint:28,strawberry:36</h4>
+                    <textarea id="grab-values-arg-1" cols="160" rows="1">vanilla:41,chocolate:69,mint:28,strawberry:36</textarea>
+                </div>
+                <div class="argument">
+                    <!-- Include a text description of the function -->
+                    <h2>grabValues()</h2>
+                    <p>Returns all of input object's key values as an array.</p>
+                </div>
+                <div class="result">
+                    <!-- Shows the result of running recreated method on input array. -->
+                    <h2>Output</h2>
+                    <p id="grab-values-result">Output will appear here.</p>
+                </div>
+                <button id="invoke-grab-values-function">
+                    <!-- Pressing it should take input and argument, run recreated method, and populated the result div. -->
+                    <strong>Invoke!</strong>
+                </button>
+            </div>
+
+
+
+            <script src="../js/grab-keys.js"></script>
+            <script src="../js/grab-values.js"></script>
+            <script src="../js/my-last-index-of.js"></script>
+</body>
+
+</html>

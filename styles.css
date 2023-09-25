@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2%;
+    padding-block: 0%;
+    font-size: xx-large;
+}
+
+li {
+    margin-top: 10px;
+}
+
+.footnote {
+    padding-inline: 3%;
+    padding-block: 5%;
+    text-align: left;
+}
