@@ -1,0 +1,44 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.input-div {
+    margin: auto;
+    border: 2px solid orange;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    width: 20rem;
+}
+
+.argument-div {
+    margin: auto;
+    border: 2px solid blueviolet;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    width: 20rem;
+}
+
+.result-div {
+    margin: auto;
+    border: 2px solid brown;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    width: 20rem;
+}
+
+.button-div {
+    margin: auto;
+    border: 2px solid green;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    width: 20rem;
+}
+
